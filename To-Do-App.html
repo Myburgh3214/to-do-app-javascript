@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>To-Do-App</title>
+       <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  </head>
+  <body>
+      <form name="To-Do-List" method="post">
+          <div>
+              <label for="newTask" id="newTask"><b>New Task:</b></label>
+              <input type="text" id="Task" name="Task" placeholder="Insert task here.">
+          </div>
+          <div>
+              <label for="dueDate"><b>Due date:</b></label>
+              <input type="date" id="dueDate" placeholder="Choose a due date.">
+          </div>
+          <div>
+              <p>Your tasks are:</p>
+              <ol id="myList"></ol>
+          </div>
+          <div>
+              <input type="button" onclick="addTask()" value="submit" class="btn" id="submit">
+          </div>
+      </form>
+      <script src="js/script.js"></script>
+  </body>
+</html>
