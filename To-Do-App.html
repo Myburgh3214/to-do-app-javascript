@@ -14,13 +14,21 @@
               <label for="dueDate"><b>Due date:</b></label>
               <input type="date" id="dueDate" placeholder="Choose a due date.">
           </div>
+            <input type="button" onclick="addDate(), addTask(), myData()" value="submit" class="btn" id="submit">
           <div>
+              <br>
+              <button onclick="Delete Tasks()">Clear All</button>
+              </div>
+              <div>
               <p>Your tasks are:</p>
-              <ol id="myList"></ol>
+                  <input type="button" onclick="sortAbc()" value="Sort" class="btn" id="submit">
+
+                  <div contenteditable="true">
+              <ol id="myList">
+                      </ol>
+                  </div>
           </div>
-          <div>
-              <input type="button" onclick="addTask()" value="submit" class="btn" id="submit">
-          </div>
+         
       </form>
       <script src="js/script.js"></script>
   </body>
