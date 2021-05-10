@@ -14,11 +14,11 @@ function addDate() {
 }
 
  function sortAbc() {
-   // Declaring Variables
+    // Declaring Variables
             var geek_list, i, run, li, stop;
   
             // Taking content of list as input
-            geek_list = document.getElementById("myList");
+            geek_list = document.getElementById("my_span1");
   
             run = true;
   
@@ -33,8 +33,8 @@ function addDate() {
                         li[i + 1].innerHTML.toLowerCase()) {
                         stop = true;
                         break;
-                    }
-                }
+}
+}
   
                 /* If the current item is smaller than 
                    the next item then adding it after 
@@ -44,16 +44,23 @@ function addDate() {
                             li[i + 1], li[i]);
   
                     run = true;
-                }
-            }
-        }
- 
-function myData(){
-    let Object = {List: "Play Violin"};
-    console.log(Object);
-    let myData = JSON.stringify(Object);
-    console.log(myData);
-    localStorage.setItem("userData", myData);
+}
+}
+}
+const formatTextWrap = (text, maxLineLength) => {
+  var words = text.replace(/[\r\n]+/g, ' ').split(' ')
+  var lineLength = 0
+  var output = ''
+  for (var word of words) {
+    if (lineLength + word.length >= maxLineLength) {
+      output += `\n${word} `
+      lineLength = word.length + 1
+    } else {
+      output += `${word} `
+      lineLength += word.length + 1
+    }
+  }
+  return output
 }
 function my_fun(j){
 
