@@ -1,3 +1,19 @@
+function getInputValueTask(){
+            // Selecting the input element and get its value 
+           let listVal = document.getElementById("Task").value;
+            let listValDate = document.getElementById("dueDate").value;
+            // Displaying the value
+           console.log(listVal, listValDate);   
+
+
+let obj = document.getElementById("Task").value;
+
+let myData = JSON.stringify(obj);
+localStorage.setItem("userData", myData);
+
+myText = localStorage.getItem("userData");
+newObj = JSON.parse(myText);
+}
 let newList = document.getElementById("my_span1")
 function addTask() {
     let Task = document.getElementById("Task").value;
@@ -47,6 +63,7 @@ function addDate() {
 }
 }
 }
+
 const formatTextWrap = (text, maxLineLength) => {
   var words = text.replace(/[\r\n]+/g, ' ').split(' ')
   var lineLength = 0
@@ -74,10 +91,8 @@ if(document.getElementById(chkbox).checked){
 
 document.getElementById(my_span).style.textDecoration='line-through';
 
-}else{
-
-document.getElementById(my_span).style.textDecoration='none';
-
 }
-
+else{
+document.getElementById(my_span).style.textDecoration='none';
+}
 }
