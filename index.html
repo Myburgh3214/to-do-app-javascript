@@ -13,20 +13,21 @@
               <label for="dueDate"><b>Due date:</b></label>
               <input type="date" id="dueDate" placeholder="Choose a due date." required>
           </div>
-            <input type="button" onclick="addDate(), addTask(), getInputValueTask()" value="submit" class="btn" id="submit">
+            <input type="button" onclick="addDate(), addTask()" value="submit" class="btn" id="submit">
+            <input type="button" value="Save" onclick= "getInputValueTask()">
           <div>
               <br>
               <button onclick="Delete Tasks()">Clear All</button>
               </div>
               <div>
+                <input type=checkbox  id=ckb1 value=1 onclick=my_fun(1);>
               <p>Your tasks are:</p>
                   <input type="button" onclick="sortAbc()" value="Sort" class="btn" id="submit">
                   <p id="strikeInstruction">Check for strikethrough:</p>
                   <div contenteditable="true">
               <ol id="my_span1">
-                  <input type=checkbox  id=ckb1 value=1 onclick=my_fun(1);>
-                      </ol>
-                  </div>
+              </ol>
+          </div>
           </div>
       </form>
       <script src="js/script.js"></script>

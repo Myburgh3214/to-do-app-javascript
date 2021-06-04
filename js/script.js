@@ -1,10 +1,8 @@
 function getInputValueTask(){
             // Selecting the input element and get its value 
            let listVal = document.getElementById("Task").value;
-            let listValDate = document.getElementById("dueDate").value;
             // Displaying the value
-           console.log(listVal, listValDate);   
-
+           console.log(listVal);   
 
 let obj = document.getElementById("Task").value;
 
@@ -13,6 +11,8 @@ localStorage.setItem("userData", myData);
 
 myText = localStorage.getItem("userData");
 newObj = JSON.parse(myText);
+let getItem = localStorage.getItem("userData");
+console.log(getItem);
 }
 let newList = document.getElementById("my_span1")
 function addTask() {
@@ -28,10 +28,12 @@ function addDate() {
    date.appendChild(document.createTextNode(dueDate));
     newDate.appendChild(date);
 }
+let getItem = localStorage.getItem("userData");
+my_span1.appendChild(document.createTextNode(getItem));
 
  function sortAbc() {
     // Declaring Variables
-            var geek_list, i, run, li, stop;
+            let geek_list, i, run, li, stop;
   
             // Taking content of list as input
             geek_list = document.getElementById("my_span1");
@@ -65,9 +67,9 @@ function addDate() {
 }
 
 const formatTextWrap = (text, maxLineLength) => {
-  var words = text.replace(/[\r\n]+/g, ' ').split(' ')
-  var lineLength = 0
-  var output = ''
+  let words = text.replace(/[\r\n]+/g, ' ').split(' ')
+  let lineLength = 0
+  let output = ''
   for (var word of words) {
     if (lineLength + word.length >= maxLineLength) {
       output += `\n${word} `
@@ -81,11 +83,11 @@ const formatTextWrap = (text, maxLineLength) => {
 }
 function my_fun(j){
 
-var chkbox ="ckb" + j;
+let chkbox ="ckb" + j;
 
-var my_span ="my_span" + j;
+let my_span ="my_span" + j;
 
-var msg = chkbox + "  " + my_span;
+let msg = chkbox + "  " + my_span;
 
 if(document.getElementById(chkbox).checked){ 
 
@@ -96,3 +98,4 @@ else{
 document.getElementById(my_span).style.textDecoration='none';
 }
 }
+///Tasks are saving, but not dates
