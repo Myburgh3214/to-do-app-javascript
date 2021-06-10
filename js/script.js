@@ -102,7 +102,4 @@ else{
 document.getElementById(my_span).style.textDecoration='none';
 }
 }
-function Delete Tasks(){
-  //remove the parent of button from its grand parent
-  this.parentNode.parentNode.removeChild(this.parentNode);
-}
+
