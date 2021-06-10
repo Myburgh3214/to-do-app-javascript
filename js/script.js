@@ -33,8 +33,8 @@ function addDate() {
    date.appendChild(document.createTextNode(dueDate));
     newDate.appendChild(date);
 }
-let getItem = localStorage.getItem("userData",1);
-let getItem1 = localStorage.getItem("userDate",1);
+let getItem = localStorage.getItem("userData");
+let getItem1 = localStorage.getItem("userDate");
 my_span1.appendChild(document.createTextNode(getItem));
 my_span1.appendChild(document.createTextNode(getItem1));
 
