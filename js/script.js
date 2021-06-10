@@ -1,22 +1,26 @@
 function getInputValueTask(){
             // Selecting the input element and get its value 
-           let listVal = document.getElementById("Task").value;
+           let listVal = document.getElementById("listTask").value;
+           let listDate = document.getElementById("dueDate").value;
+
             // Displaying the value
            console.log(listVal);   
 
-let obj = document.getElementById("Task").value;
-
-let myData = JSON.stringify(obj);
+let obj = document.getElementById("listTask").value;
+let obj1 = document.getElementById("dueDate").value;
+const myData = JSON.stringify(obj);
+const myDate = JSON.stringify(obj1)
 localStorage.setItem("userData", myData);
+localStorage.setItem("userDate", myDate);
 
-myText = localStorage.getItem("userData");
+
+myText = localStorage.getItem("userData, userDate");
 newObj = JSON.parse(myText);
-let getItem = localStorage.getItem("userData");
-console.log(getItem);
+let getItem = localStorage.getItem("userData, userDate");
 }
 let newList = document.getElementById("my_span1")
 function addTask() {
-    let Task = document.getElementById("Task").value;
+    let Task = document.getElementById("listTask").value;
     let entry = document.createElement("li");
     entry.appendChild(document.createTextNode(Task));
     newList.appendChild(entry);
@@ -33,16 +37,16 @@ my_span1.appendChild(document.createTextNode(getItem));
 
  function sortAbc() {
     // Declaring Variables
-            let geek_list, i, run, li, stop;
+            let sortList, i, run, li, stop;
   
             // Taking content of list as input
-            geek_list = document.getElementById("my_span1");
+            sortList = document.getElementById("my_span1");
   
             run = true;
   
             while (run) {
                 run = false;
-                li = geek_list.getElementsByTagName("LI");
+                li = sortList.getElementsByTagName("LI");
   
                 // Loop traversing through all the list items
                 for (i = 0; i < (li.length - 1); i++) {
@@ -98,4 +102,7 @@ else{
 document.getElementById(my_span).style.textDecoration='none';
 }
 }
-///Tasks are saving, but not dueDate
+function Delete Tasks(){
+  //remove the parent of button from its grand parent
+  this.parentNode.parentNode.removeChild(this.parentNode);
+}

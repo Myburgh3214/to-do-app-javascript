@@ -8,7 +8,7 @@
       <form name="To-Do-List" method="post">
           <div>
               <label for="newTask" id="newTask"><b>New Task:</b></label>
-              <input type="text" id="Task" name="Task" placeholder="Insert task here." required>
+              <input type="text" id="listTask" name="listTask" placeholder="Insert task here." required>
          
               <label for="dueDate"><b>Due date:</b></label>
               <input type="date" id="dueDate" placeholder="Choose a due date." required>
@@ -17,13 +17,13 @@
             <input type="button" value="Save" onclick= "getInputValueTask()">
           <div>
               <br>
-              <button onclick="Delete Tasks()">Clear All</button>
+              <button onclick="Delete Tasks()">Delete All</button>
               </div>
               <div>
-                <input type=checkbox  id=ckb1 value=1 onclick=my_fun(1);>
               <p>Your tasks are:</p>
                   <input type="button" onclick="sortAbc()" value="Sort" class="btn" id="submit">
-                  <p id="strikeInstruction">Check for strikethrough:</p>
+                  <p id="strikeInstruction">Check to strike all tasks :</p>
+                    <input type=checkbox  id=ckb1 value=1 onclick=my_fun(1);>
                   <div contenteditable="true">
               <ol id="my_span1">
               </ol>
