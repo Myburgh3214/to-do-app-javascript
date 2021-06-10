@@ -4,19 +4,20 @@ function getInputValueTask(){
            let listDate = document.getElementById("dueDate").value;
 
             // Displaying the value
-           console.log(listVal);   
-
-let obj = document.getElementById("listTask").value;
-let obj1 = document.getElementById("dueDate").value;
-const myData = JSON.stringify(obj);
-const myDate = JSON.stringify(obj1)
-localStorage.setItem("userData", myData);
-localStorage.setItem("userDate", myDate);
+           console.log(listVal); 
+                       console.log(listDate);   
 
 
-myText = localStorage.getItem("userData, userDate");
-newObj = JSON.parse(myText);
-let getItem = localStorage.getItem("userData, userDate");
+            let obj = document.getElementById("listTask").value;
+            let obj1 = document.getElementById("dueDate").value;
+            const myData = JSON.stringify(obj);
+            const myDate = JSON.stringify(obj1)
+            localStorage.setItem("userData", myData);
+            localStorage.setItem("userDate", myDate);
+
+            myText = localStorage.getItem("userData, userDate");
+            newObj = JSON.parse(myText);
+
 }
 let newList = document.getElementById("my_span1")
 function addTask() {
@@ -32,8 +33,11 @@ function addDate() {
    date.appendChild(document.createTextNode(dueDate));
     newDate.appendChild(date);
 }
-let getItem = localStorage.getItem("userData");
+let getItem = localStorage.getItem("userData",1);
+let getItem1 = localStorage.getItem("userDate",1);
 my_span1.appendChild(document.createTextNode(getItem));
+my_span1.appendChild(document.createTextNode(getItem1));
+
 
  function sortAbc() {
     // Declaring Variables
@@ -102,4 +106,6 @@ else{
 document.getElementById(my_span).style.textDecoration='none';
 }
 }
-
+function deleteButton(){
+ localStorage.removeItem("userData");
+}
